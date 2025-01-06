@@ -5,31 +5,21 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, Twitter, Instagram, Youtube, Search } from 'lucide-react'
-import Logo from "@/public/avlogo.webp"
+import Logo from "@/public/Komp_1_116.webp"
 import HeroImage from "@/public/DC21EBF5-E354-4F09-8D06-59E813BE927E-1395-00000035C4088B25.webp"
 
 const primaryNavItems = [
   { href: "/", text: "Home" },
-  { href: "/collections/all", text: "All Products" },
-  { href: "/collections/summer-23", text: "Summer 23 Collection" },
-  { href: "/pages/faq", text: "FAQ" },
 ]
 
 const secondaryNavItems = [
-  { href: "/account/login", text: "Log in" },
-  { href: "/account/register", text: "Create account" },
-  { href: "/policies/refund-policy", text: "Refund Policy" },
-  { href: "/policies/terms-of-service", text: "Terms of Service" },
-  { href: "/policies/privacy-policy", text: "Privacy Policy" },
-  { href: "/pages/contact-us", text: "Contact Us" },
-  { href: "/policies/legal-notice", text: "Imprint" },
-  { href: "https://discord.com/invite/waveaut", text: "Discord Server Invite", external: true },
+  { href: "https://discord.gg/rfNvsgf9mv", text: "Discord Server Invite", external: true },
 ]
 
 const socialLinks = [
-  { href: "https://twitter.com/waveAUT", icon: Twitter, title: "Wave Esports on Twitter" },
-  { href: "https://www.instagram.com/waveaut/", icon: Instagram, title: "Wave Esports on Instagram" },
-  { href: "https://www.youtube.com/channel/UC9gIqZwNLw0XEb77sS_Klxg", icon: Youtube, title: "Wave Esports on YouTube" },
+  { href: "https://x.com/aventix_esport", icon: Twitter, title: "Aventix Esports on Twitter" },
+  { href: "https://www.instagram.com/aventix_esport", icon: Instagram, title: "Aventix Esports on Instagram" },
+  { href: "https://www.youtube.com/@AventixeSports-v1i", icon: Youtube, title: "Aventix Esports on YouTube" },
 ]
 
 const HeroWithNav = () => {
@@ -96,14 +86,6 @@ const HeroWithNav = () => {
                 />
               </Link>
             </div>
-
-            {/* Cart Icon (top right) */}
-            <Link href="/cart" className="btn btn--clear btn--square btn--hover-scale site-header__cart ajax-cart__toggle" aria-expanded="false">
-              <svg aria-hidden="true" focusable="false" role="presentation" className="icon icon-header-bag w-6 h-6 text-white" viewBox="0 0 27.2 27">
-                <path fill="currentColor" d="M19.6 9c-.2-5.1-2.7-9-6-9s-5.8 3.9-6 9h-4v18h20V9h-4zm-6-7c2.1 0 3.8 3.2 4 7h-8c.2-3.8 1.9-7 4-7zm-8 23V11h11v14h-11zm16 0h-3V11h3v14z"></path>
-              </svg>
-              <span className="sr-only">View cart</span>
-            </Link>
           </div>
         </div>
 
@@ -160,7 +142,7 @@ const HeroWithNav = () => {
                 </ul>
 
                 <motion.div
-                  className="navigation__social-sharing mt-8"
+                  className="navigation__social-sharing mt-8 flex justify-center"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: (primaryNavItems.length + secondaryNavItems.length) * 0.1 }}
@@ -182,32 +164,6 @@ const HeroWithNav = () => {
                     ))}
                   </ul>
                 </motion.div>
-
-                {/* Search */}
-                <motion.div
-                  className="navigation__search mt-8"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: (primaryNavItems.length + secondaryNavItems.length + 1) * 0.1 }}
-                >
-                  <form action="/search" method="get" role="search" className="flex">
-                    <div className="input-group--underline flex-grow">
-                      <input
-                        className="input-group__field w-full bg-transparent border-b border-white text-white px-2 py-1"
-                        type="search"
-                        name="q"
-                        placeholder="Search"
-                        aria-label="Search"
-                      />
-                    </div>
-                    <div className="input-group__btn">
-                      <button type="submit" className="btn btn--clear btn--square text-white">
-                        <Search size={24} />
-                        <span className="sr-only">Search again</span>
-                      </button>
-                    </div>
-                  </form>
-                </motion.div>
               </div>
             </motion.div>
           )}
@@ -225,8 +181,8 @@ const HeroWithNav = () => {
             className="absolute bottom-1/4 left-0 right-0 z-20 text-center px-6"
           >
             <h2 className="text-white text-4xl md:text-6xl font-bold mb-4">AVENTIX</h2>
-            <Link href="/collections/wave-x-syrup" className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-opacity-90 transition inline-block">
-              Explore
+            <Link href="https://discord.gg/rfNvsgf9mv" className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-opacity-90 transition inline-block">
+              Join the discord
             </Link>
           </motion.div>
         )}
