@@ -8,6 +8,11 @@ import { Menu, X, Twitter, Instagram, Youtube } from 'lucide-react'
 import Logo from "@/public/av/Komp_1_116.webp"
 import HeroImage from "@/public/mann-unten-auf-seinem-glC3BCck-122387748.webp"
 
+const getOnlineUsers = async () => {
+  // Replace this with your API fetch logic
+  return Math.floor(Math.random() * 100) + 1; // Random number between 1 and 100
+}
+
 const primaryNavItems = [
   { href: "/", text: "Home" },
   { href: "/sign-in", text: "Log in"}
@@ -26,6 +31,20 @@ const socialLinks = [
 const HeroWithNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
+  const [onlineUsers, setOnlineUsers] = useState(0) // State for online users
+
+  useEffect(() => {
+    setMounted(true)
+    const fetchOnlineUsers = async () => {
+      const count = await getOnlineUsers()
+      setOnlineUsers(count)
+    }
+    fetchOnlineUsers()
+
+    // Optionally, poll every few seconds to update the count
+    const interval = setInterval(fetchOnlineUsers, 30000) // Update every 30 seconds
+    return () => clearInterval(interval)
+  }, [])
 
   useEffect(() => {
     setMounted(true)
@@ -86,6 +105,12 @@ const HeroWithNav = () => {
                   height={60}
                 />
               </Link>
+            </div>
+             {/* Online Users (top right) */}
+             <div className="absolute top-0 right-0 p-4">
+              <span className="text-white text-sm bg-black bg-opacity-60 px-3 py-1 rounded-lg">
+                {onlineUsers} online
+              </span>
             </div>
           </div>
         </div>
