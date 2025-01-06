@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, Twitter, Instagram, Youtube, Search } from 'lucide-react'
+import { Menu, X, Twitter, Instagram, Youtube } from 'lucide-react'
 import Logo from "@/public/Komp_1_116.webp"
 import HeroImage from "@/public/DC21EBF5-E354-4F09-8D06-59E813BE927E-1395-00000035C4088B25.webp"
 
