@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import Hero from './components/Hero'
+import Link from 'next/link';
 
 const page = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -14,10 +15,10 @@ const page = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-12">
         {/* Legal Links */}
         <div className="space-y-3">
-          <a href="/" className="block hover:text-gray-300 uppercase text-sm font-medium">Home</a>
-          <a href="/sign-in" className="block hover:text-gray-300 uppercase text-sm font-medium">Log in</a>
-          <a href="https://discord.gg/rfNvsgf9mv" className="block hover:text-gray-300 uppercase text-sm font-medium">Contact Us</a>
-          <a href="https://discord.gg/rfNvsgf9mv" className="block hover:text-gray-300 uppercase text-sm font-medium">Discord Server Invite</a>
+          <Link href="/" className="block hover:text-gray-300 uppercase text-sm font-medium">Home</Link>
+          <Link href="/sign-in" className="block hover:text-gray-300 uppercase text-sm font-medium">Log in</Link>
+          <Link href="https://discord.gg/rfNvsgf9mv" className="block hover:text-gray-300 uppercase text-sm font-medium">Contact Us</Link>
+          <Link href="https://discord.gg/rfNvsgf9mv" className="block hover:text-gray-300 uppercase text-sm font-medium">Discord Server Invite</Link>
         </div>
 
         {/* Newsletter */}
