@@ -1,7 +1,9 @@
+import Image from "next/image";
+
 export function Logo() {
     return (
       <div className="flex items-center space-x-2">
-        <img 
+        <Image
           src="/av/Komp_1_116.webp" 
           alt="Logo" 
           width={100} 

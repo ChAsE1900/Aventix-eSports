@@ -1,6 +1,5 @@
 import React from 'react'
 import Hero from './components/Hero'
-import { Github, Twitter, Linkedin } from 'lucide-react';
 
 const page = () => {
   return (
