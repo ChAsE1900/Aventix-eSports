@@ -10,7 +10,7 @@ import HeroImage from "@/public/mann-unten-auf-seinem-glC3BCck-122387748.webp"
 
 const primaryNavItems = [
   { href: "/", text: "Home" },
-  { href: "/sign-in", text: "Account"}
+  { href: "/sign-in", text: "Log in"}
 ]
 
 const secondaryNavItems = [
@@ -101,6 +101,16 @@ const HeroWithNav = () => {
               className="fixed inset-0 bg-black z-30 overflow-y-auto flex flex-col items-center justify-center py-8 px-6"
             >
               <div className="navigation__container text-center w-full">
+                {/* Menu Button (top left) */}
+<button
+  onClick={toggleMenu}
+  className={`fixed top-4 left-20 z-40 border border-white border-opacity-30 h-10 w-10 inline-flex justify-center items-center rounded-lg ${
+    isMenuOpen ? 'bg-black' : ''
+  }`}
+  aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+>
+  {isMenuOpen ? <X className="text-white" /> : <Menu className="text-white" />}
+</button>
                 <ul className="navigation__links space-y-4">
                   {primaryNavItems.map((item, index) => (
                     <motion.li
