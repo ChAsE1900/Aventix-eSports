@@ -6,7 +6,7 @@ import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, Twitter, Instagram, Youtube } from 'lucide-react'
 import Logo from "@/public/av/Komp_1_116.webp"
-import HeroImage from "@/public/mann-unten-auf-seinem-glC3BCck-122387748.webp"
+import HeroImage from "@/public/wmremove-transformed.webp"
 
 const getOnlineUsers = async () => {
   // Replace this with your API fetch logic
@@ -15,6 +15,7 @@ const getOnlineUsers = async () => {
 
 const primaryNavItems = [
   { href: "/", text: "Home" },
+  { href: "/about", text: "About us" },
   { href: "/sign-in", text: "Log in"}
 ]
 
@@ -100,7 +101,7 @@ const HeroWithNav = () => {
               <Link href="/" className="relative">
                 <Image
                   src={Logo}
-                  alt="Wave LOGO"
+                  alt="AV logo"
                   width={140}
                   height={60}
                 />
@@ -216,7 +217,7 @@ const HeroWithNav = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="absolute bottom-1/4 left-0 right-0 z-20 text-center px-6"
           >
-            <h2 className="text-white text-4xl md:text-6xl font-bold mb-4">AVENTIX</h2>
+            <h2 className="text-white text-4xl md:text-6xl font-bold mb-4">AVENTIX eSports</h2>
             <Link href="https://discord.gg/rfNvsgf9mv" className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-opacity-90 transition inline-block">
               Join the discord
             </Link>
