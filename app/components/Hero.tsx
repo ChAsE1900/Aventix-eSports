@@ -24,8 +24,8 @@ const secondaryNavItems = [
 ]
 
 const socialLinks = [
-  { href: "https://x.com/aventix_esport", icon: Twitter, title: "Aventix Esports on Twitter" },
-  { href: "https://www.instagram.com/aventix_esport", icon: Instagram, title: "Aventix Esports on Instagram" },
+  { href: "https://x.com/aventixesports1", icon: Twitter, title: "Aventix Esports on Twitter" },
+  { href: "https://www.instagram.com/esports_aventix/", icon: Instagram, title: "Aventix Esports on Instagram" },
   { href: "https://www.youtube.com/@AventixeSports-v1i", icon: Youtube, title: "Aventix Esports on YouTube" },
 ]
 
